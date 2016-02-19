@@ -1,48 +1,67 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>War of the Circles</title>
-    <link type="text/css" rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="./assetmanager.js"></script>
-    <script type="text/javascript" src="./gameengine.js"></script>
-    <script type="text/javascript" src="./HitBox.js"></script>
-    <script type="text/javascript" src="./main.js"></script>
-</head>
-<body>
-    <div>Spawn some soldiers for both teams and hit the start button to begin. Press space to pause</div>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>491assignment2 by brandb94</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">491assignment2</h1>
+      <h2 class="project-tagline">Interaction Assignment for TCSS 491 @UWT</h2>
+      <a href="https://github.com/brandb94/491Assignment2" class="btn">View on GitHub</a>
+      <a href="https://github.com/brandb94/491Assignment2/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/brandb94/491Assignment2/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
+    <section class="main-content">
+      <h3>
+<a id="assignment-2---battle-of-two-armies" class="anchor" href="#assignment-2---battle-of-two-armies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assignment 2 - Battle of Two Armies</h3>
 
-    <canvas id="gameWorld" width="800" height="800" style="border: 1px solid white; background: black" tabindex="1">
+<p>In this simple simulation you are started with a blank field and two armies to populate. There are controls to select which army you want to spawn a soldiers for, as well as a small selection of formations you can choose from that will be placed when you click on the main board. </p>
 
-    <!--<canvas id="gameWorld" width="1000" height="1000" style="border: 1px solid white; background: black" tabindex="1"></canvas>-->
+<h3>
+<a id="interactions" class="anchor" href="#interactions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interactions</h3>
 
-    </canvas>
+<ul>
+<li>Soldier Targeting: Upon spawning, the soldiers will identify the closest enemy soldier and begin to pursue them. </li>
+<li>Commander - soldier connection: When a commander dies, it's army receives a debuff, lowering the army's hit chance by an additional 30%. This effect does not stack when multiple commanders are killed, but the debuff timer is reset with each additional commander death.</li>
+</ul>
 
+<h3>
+<a id="controls" class="anchor" href="#controls" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Controls</h3>
 
+<ul>
+<li>click buttons to determine which team and formation you want to spawn</li>
+<li>click the main canvas to choose where you want to spawn the soldiers</li>
+<li>click the start button to begin the fight. Clicking it again will freeze the soldiers in place, allowing you to place more soldiers mid-simulation if you want.</li>
+<li>space bar pauses the game loop</li>
+</ul>
 
+<h4>
+<a id="emergent-behaviors" class="anchor" href="#emergent-behaviors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Emergent behaviors</h4>
 
+<ul>
+<li>Selecting target based on proximity.</li>
+<li>Changing targets when current target dies</li>
+<li>Shrinking in size and receiving a debuff when a commander dies</li>
+</ul>
 
+<h1>
+<a id="important-due-to-the-way-i-set-up-the-second-canvas-your-browser-window-must-be-wide-enough-to-have-both-canvases-side-by-side" class="anchor" href="#important-due-to-the-way-i-set-up-the-second-canvas-your-browser-window-must-be-wide-enough-to-have-both-canvases-side-by-side" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important: Due to the way I set up the second canvas, your browser window must be wide enough to have both canvases side by side.</h1>
 
-    <canvas id="controlBoard" width="400" height="400" style="border: 1px solid white; background: black" tabindex="1"></canvas>
-    <button name="leftSelect" id="leftSelector">Select Left Team</button>
-    <button name="rightSelect" id="rightSelector">Select Right Team</button>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/brandb94/491Assignment2">491assignment2</a> is maintained by <a href="https://github.com/brandb94">brandb94</a>.</span>
 
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-    <button name="triangle" id="triangleSelector">Triangle Formation (15)</button>
-    <button name="rectangle" id="rectangleSelector">Rectangle Formation (12)</button>
-    <button name="row" id="rowSelector">Row Formation (10)</button>
-    <button name="single" id="singleSelector">Single Soldier (1)</button>
+    </section>
 
-    <button name="commander" id="commanderSelector">Commander (1)</button>
-
-    <button name="clear" id="clearButton">Clear Field</button>
-
-    <button name="start" id="startButton">Start Simulation</button>
-
-
-
-
-
-</body>
+  
+  </body>
 </html>
