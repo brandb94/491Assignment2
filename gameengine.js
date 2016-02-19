@@ -16,7 +16,10 @@ window.requestAnimFrame = (function () {
         };
 })();
 
-
+/**
+ * Timer
+ * @constructor
+ */
 function Timer() {
     this.gameTime = 0;
     this.maxStep = 0.05;
