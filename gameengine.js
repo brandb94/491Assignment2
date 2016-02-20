@@ -17,7 +17,7 @@ window.requestAnimFrame = (function () {
 })();
 
 /**
- * Timer
+ * Timer s
  * @constructor
  */
 function Timer() {
